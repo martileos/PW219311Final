@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Almacen</title>
+		<link rel="stylesheet" href="css/almacen.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+
+
+
+	
+
+
+
+	<section class="Estilo" id="Alta">
+		<h4>Alta de Almacen</h4>
+		<input class="botonesR" type="text" name="nombres" id="nombres" placeholder="Ingrese Nombre de Almacen">
+
+		<div id="registraralmacen">
+			<registraralmacen></registraralmacen>
+		</div>
+
+	</section>
+
+	<section class="Estilo" id="BajaActualiza">
+			<h4>Baja o actualización de Almacen</h4>
+		<input class="botonesR" list="idAlmacen" id="rfc" placeholder="Selecciona el identificador del Almacen">
+		<input class="botonesR" type="text" name="NombreAlmacen" id="NombreAlmacen">
+
+
+		<div id="eliminaralmacen">
+			<eliminaralmacen></eliminaralmacen>
+		</div>
+
+		<div id="actualizaralmacen">
+			<actualizaralmacen></actualizaralmacen>
+		</div>
+
+	
+	</section>
+	
+		<section class="Estilo" id="AgregarArticulos">
+		<h4>Articulos en Almacen</h4>
+		
+		<input class="botonesR" list="ClaveAlmacen" type="text" name="clavealmacen" id="clavealmacen" placeholder="Inserta la clave del almacen">
+		<datalist id="ClaveAlmacen">
+		</datalist>
+
+		<input class="botonesR" type="text" name="Nombre" id="nombre"  placeholder="Almacen seleccionado" readonly>
+
+		<input class="botonesR" list="clavesArticulo" type="text" name="RFC" id="RFC" placeholder="Inserte la clave del artículo">
+		<datalist id="clavesArticulo">
+		</datalist>
+		<input class="botonesR" type="number" name="cantidadArticulos" id="cantidadArticulos"placeholder="Seleccione la cantidad de Articulos">
+
+		<input class="botonesR" type="date" name="Fecha" id="fecha">
+
+		<input class="botonesR" type="time" name="Hora" id="hora">
+
+		<div id="productoalmacen">
+			<productoalmacen></productoalmacen>
+		</div>
+	</section>
+	
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+
+
+	<script>
+		Vue.component('registraralmacen', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Registrar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#registraralmacen'
+		})
+	</script>
+
+	<script>
+		Vue.component('eliminaralmacen', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Eliminar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#eliminaralmacen'
+		})
+	</script>
+	<script>
+		Vue.component('actualizaralmacen', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Actualizar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#actualizaralmacen'
+		})
+	</script>
+	<script>
+		Vue.component('productoalmacen', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Agregar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#productoalmacen'
+		})
+	</script>
+
+</body>
+</html>

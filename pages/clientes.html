@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Clientes</title>
+	<link rel="stylesheet" href="css/clientes.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+	
+	<section class="Estilo" id="Alta">
+		<h4>Registro de Clientes</h4>
+		<input class="botonesR" type="text" name="nombres" id="nombres" placeholder="Ingrese nombre">
+		<input class="botonesR" type="text" name="Apellidos" id="apellidos" placeholder="Ingrese apellidos">
+		<input class="botonesR" type="text" name="RFC" id="RFC" placeholder="Ingrese RFC">
+		<input class="botonesR" type="text" name="telefono" id="telefono" placeholder="Telefono">
+		<input class="botonesR" type="email" name="correo" id="correo" placeholder="E-mail">
+		<input class="botonesR" type="text" name="codigoP" id="codigoP" placeholder="Código Postal">
+
+		<div id="registrarcliente">
+			<registrarcliente></registrarcliente>
+		</div>
+	</section>
+
+	<section class="Estilo" id="BajaActualiza">
+			<h4>Baja o actualización de Clientes</h4>
+		<input class="botonesR" list="rfc" id="rfc" placeholder="Selecciona el RFC ">
+		<datalist id="rfc">
+			
+		</datalist>
+		<input class="botonesR" type="text" name="Apellidos" id="Apellidos">
+		<input class="botonesR" type="text" name="Nombre" id="Nombre">
+		<input class="botonesR" type="text" name="telefono" id="Telefono">
+		<input class="botonesR" type="email" name="correo" id="Correo">
+		<input class="botonesR" type="text" name="codigoP" id="CodigoP">
+		<div id="eliminarcliente">
+			<eliminarcliente></eliminarcliente>
+		</div>
+		<div id="actualizarcliente">
+			<actualizarcliente></actualizarcliente>
+		</div>
+	</section>
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+
+	<script>
+		Vue.component('registrarcliente', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Registrar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#registrarcliente'
+		})
+	</script>
+
+	<script>
+		Vue.component('eliminarcliente', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Eliminar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#eliminarcliente'
+		})
+	</script>
+	<script>
+		Vue.component('actualizarcliente', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Actualizar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#actualizarcliente'
+		})
+	</script>
+</body>
+</html>

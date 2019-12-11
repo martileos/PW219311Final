@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Articulos</title>
+	<link rel="stylesheet" href="css/articulos.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+	<section class="Estilo" id="AltaArticulos">
+		<h4>Registro de Articulos</h4>
+		<input class="botonesR" type="text" name="idArticulo" id="idArticulo" placeholder="Ingrese el id del Articulo">
+		<input class="botonesR" type="text" name="nombreArticulo" id="nombreArticulo" placeholder="Ingrese el nombre del Articulo">
+		<input class="botonesR" type="text" name="precio" id="precio" placeholder="Ingrese precio">
+		<div id="registrararticulo">
+			<registrararticulo></registrararticulo>
+		</div>
+
+
+</section>
+
+	<section class="Estilo" id="BajaActualizar">
+	
+	<h4>Baja o Actualización de articulo</h4>
+
+	<input class="botonesR" list="idArticulo" id="idArticulo" placeholder="Selecciona el id del Articulo">
+		<input class="botonesR" type="text" name="nombreArticulo" id="nombreArticulo" placeholder="Nombre del Articulo">
+		<input class="botonesR" type="text" name="precio" id="precio" placeholder="Precio">
+		<div id="eliminararticulo">
+			<eliminararticulo></eliminararticulo>
+		</div>
+
+		<div id="actualizararticulo">
+			<actualizararticulo></actualizararticulo>
+		</div>
+
+	</section>
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+
+
+	<section class="Estilo" id="Kits">
+
+		<h4>Generar Kits de Articulos</h4>
+
+		<input class="botonesR" type="text" name="idKit" id="idKit" placeholder="Ingresa el id del KIT">
+		<input class="botonesR" list="idArticulo" id="idArticulo" placeholder="Selecciona el id del Articulo">
+		<input class="botonesR" type="text" name="nombreArticulo" id="nombreArticulo" placeholder="Nombre de Articulo" readonly>
+		<input class="botonesR" type="number" name="cantidadArticulos" id="cantidadArticulos" placeholder="Seleciona la cantidad de articulos">
+		<div id="agregarkit">
+			<agregarkit></agregarkit>
+		</div>
+
+	</section>
+
+	<section class="Estilo" id="Kits">
+
+		<h4>Agregar mas articulos a Kit</h4>
+
+		<input class="botonesR"ist="idKit" id="idKit" placeholder="Selecciona el id del KIT">
+		<input class="botonesR" list="idArticulo" id="idArticulo" placeholder="Selecciona el id del Articulo">
+		<input class="botonesR" type="text" name="nombreArticulo" id="nombreArticulo" placeholder="Nombre de Articulo" readonly>
+		<input class="botonesR" type="number" name="cantidadArticulos" id="cantidadArticulos" placeholder="Seleciona la cantidad de articulos">
+		<div id="bonuskit">
+			<bonuskit></bonuskit>
+		</div>
+
+	</section>
+
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+
+<script>
+		Vue.component('registrararticulo', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Registrar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#registrararticulo'
+		})
+	</script>
+
+	<script>
+		Vue.component('eliminararticulo', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Eliminar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#eliminararticulo'
+		})
+	</script>
+	<script>
+		Vue.component('actualizararticulo', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Actualizar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#actualizararticulo'
+		})
+	</script>
+	<script>
+		Vue.component('agregarkit', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Agregar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#agregarkit'
+		})
+	</script>
+	<script>
+		Vue.component('bonuskit', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Agregar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#bonuskit'
+		})
+	</script>
+</body>
+</html>

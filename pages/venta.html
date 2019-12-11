@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ventas</title>
+	<link rel="stylesheet" href="css/ventas.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+	<section class="Estilo" id="Alta">
+		<h4>Venta</h4>
+		<input class="botonesR" list="idProducto" id="idProducto" placeholder="Selecciona el id del producto">
+		<input class="botonesR" type="text" name="nombreProducto" id="nombreProducto" readonly="">
+		<input class="botonesR" type="number" name="cantidadProductoa" id="cantidadProductoa"placeholder="Seleccione la cantidad de Productos">
+		<div id="ventaproducto">
+			<ventaproducto></ventaproducto>
+		</div>
+		<input class="botonesR" list="idKit" id="idKit" placeholder="Selecciona el id del KIT">
+		<input class="botonesR" type="number" name="cantidadKit" id="cantidadKit"placeholder="Seleccione laventakit cantidad de KITS">
+		<div id="ventakit">
+			<ventakit></ventakit>
+		</div>
+
+
+		<br><br>
+		 Precio 
+			<br><br>
+		 <input class="botonesR" type="text" name="subtotal" id="subtotal" readonly="">
+		  IVA 
+			<br><br>
+		 <input class="botonesR" type="text" name="iva" id="iva" readonly="">
+		<input class="botonesR" list="descuento" id="idProducto" placeholder="Selecciona el descuento">
+		<datalist id="descuento">
+		    <option value="10%"></option>
+		    <option value="30%"></option>
+		    <option value="50%"></option>		
+  </datalist>
+
+  		  <br><br>
+  		  Total
+		<br><br>
+		<input class="botonesR" type="text" name="Total" id="Total" readonly="">
+		<div id="ventafinal">
+			<ventafinal></ventafinal>
+		</div>
+
+	</section>
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+	<script>
+		Vue.component('ventaproducto', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Agregar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#ventaproducto'
+		})
+	</script>	
+	<script>
+		Vue.component('ventakit', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Agregar">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#ventakit'
+		})
+	</script>
+	<script>
+		Vue.component('ventafinal', {
+			template:
+			`
+			<div>
+				<input class="botonR" type="submit" value="Finalizarventa">
+			</div>
+			`
+		})
+		new Vue({
+			el: '#ventafinal'
+		})
+	</script>
+</body>
+</html>

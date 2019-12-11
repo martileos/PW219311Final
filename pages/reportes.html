@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Reportes</title>
+		<link rel="stylesheet" href="css/reportes.css">
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="https://unpkg.com/vuex@3.1.1/dist/vuex.js"></script>
+</head>
+<body>
+	<section class="Estilo" id="Ventas">
+		<h4>Ventas totales</h4>
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-baqh{text-align:center;vertical-align:top}
+		</style>
+		<table class="tg" style="width: 100%;">
+		  <tr>
+		    <th class="tg-baqh">Articulo</th>
+		    <th class="tg-baqh">#</th>
+		  </tr>
+
+		</table>
+
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-baqh{text-align:center;vertical-align:top}
+		</style>
+		<table class="tg" style="width: 100%;">
+		  <tr>
+		    <th class="tg-baqh">Kit</th>
+		    <th class="tg-baqh">#</th>
+		  </tr>
+		</table>
+	</section>
+
+		<section class="Estilo" id="Productos">
+		<h4>Registro de productos por almacen</h4>
+
+		<input class="botonesR" list="ClaveAlmacen" type="text" name="clavealmacen" id="clavealmacen" placeholder="Inserta la clave del almacen">
+		<datalist id="ClaveAlmacen">
+		</datalist>
+
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+		<table class="tg" style="width: 100%;">
+		  <tr>
+		    <th class="tg-0lax">Articulo</th>
+		    <th class="tg-0lax">#</th>
+		  </tr>
+		</table>
+		
+	</section>
+
+	<section class="Estilo" id="entradasalmacen">
+			<h4>Entradas de artículos por almacen</h4>
+		<input class="botonesR" list="ClaveAlmacen" type="text" name="clavealmacen" id="clavealmacen" placeholder="Inserta la clave del almacen">
+		<datalist id="ClaveAlmacen">
+		</datalist>
+
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+		<table class="tg" style="width: 100%;">
+		  <tr>
+		    <th class="tg-0lax">Articulo</th>
+		    <th class="tg-0lax">#</th>
+		    <th class="tg-0lax">Fecha</th>
+		    <th class="tg-0lax">Hora</th>
+		  </tr>
+		</table>
+
+	
+	</section>
+
+
+	
+		<section class="Estilo" id="salidasalmacen">
+		<h4>Salida de artículos por almacen</h4>
+		<input class="botonesR" list="ClaveAlmacen" type="text" name="clavealmacen" id="clavealmacen" placeholder="Inserta la clave del almacen">
+		<datalist id="ClaveAlmacen">
+		</datalist>
+
+		<style type="text/css">
+		.tg  {border-collapse:collapse;border-spacing:0;}
+		.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:black;}
+		.tg .tg-0lax{text-align:left;vertical-align:top}
+		</style>
+		<table class="tg" style="width: 100%;">
+		  <tr>
+		    <th class="tg-0lax">Articulo</th>
+		    <th class="tg-0lax">#</th>
+		  </tr>
+		</table>		
+	</section>
+	
+	<section class="Estilo" id="BotonInicio">
+
+	<input class="botonR" type="submit" value="Regresar" onclick="window.location='../index.html'">
+
+	</section>
+</body>
+</html>
