@@ -1,0 +1,29 @@
+<form action="/update/<%= data.id%>" method="post">
+	<table align="center" border>
+		<tbody>
+			<tr>
+				<td>ID</td>
+				<td><input type="text" value="<%= data.ID %>" name="ID" placeholder="ID"></td>
+			</tr>
+			<tr>
+				<td>Nombre</td>
+				<td><input type="text" value="<%= data.nombre %>" name="nombre" placeholder="Nombre"></td>
+			</tr>
+			<tr>
+				<td>Descripcion/td>
+				<td><input type="text" value="<%= data.Descripcion %>" name="Descripcion" placeholder="Descripcion"></td>
+			</tr>
+			<tr>
+				<td>Precio/td>
+				<td><input type="text" value="<%= data.Precio %>" name="Precio" placeholder="Precio"></td>
+			</tr>
+			<tr>
+				<td>Status/td>
+				<td><input type="text" value="<%= data.Status %>" name="Status" placeholder="Status"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Actualiza articulo</button></td>
+			</tr>
+		</tbody>
+	</table>
+</form>

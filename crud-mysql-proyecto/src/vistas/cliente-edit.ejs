@@ -1,0 +1,33 @@
+<form action="/update/<%= data.id%>" method="post">
+	<table align="center" border>
+		<tbody>
+			<tr>
+				<td>RFC</td>
+				<td><input type="text" value="<%= data.RFC %>" name="RFC" placeholder="RFC"></td>
+			</tr>
+			<tr>
+				<td>nombre</td>
+				<td><input type="text" value="<%= data.nombre %>" name="nombre" placeholder="Nombre"></td>
+			</tr>
+			<tr>
+				<td>apellido/td>
+				<td><input type="text" value="<%= data.apellido %>" name="Apellido" placeholder="Apellido"></td>
+			</tr>
+			<tr>
+				<td>telefono/td>
+				<td><input type="text" value="<%= data.telefono %>" name="Telefono" placeholder="Telefono"></td>
+			</tr>
+			<tr>
+				<td>correo/td>
+				<td><input type="text" value="<%= data.correo %>" name="Correo" placeholder="Correo"></td>
+			</tr>
+			<tr>
+				<td>status/td>
+				<td><input type="text" value="<%= data.status %>" name="Status" placeholder="Status"></td>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit">Actualiza cliente</button></td>
+			</tr>
+		</tbody>
+	</table>
+</form>
